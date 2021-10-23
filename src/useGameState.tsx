@@ -6,17 +6,19 @@ import { useState } from "react";
 
 type Player = 'X' | 'O'
 
-let nextPlayer: Player = 'X';
 let currentBoard = Array(9).fill(null);
 const useGameState = () => {
   const [stepNumber, setStepNumber] = useState(0);
-
+  const [nextPlayer, setNextPlayer] = useState<Player>('X');
   const computeMove = (nextPlayer: Player, squareId: any) => {
     if (nextPlayer === 'X') {
-      nextPlayer = 'O'
+      currentBoard[squareId] = "❌";
+      setNextPlayer('O');
     } else {
-      nextPlayer = 'X'
+      currentBoard[squareId] = "⭕";
+      setNextPlayer('X');
     }
+    
     setStepNumber((currentStepNumber) => currentStepNumber + 1);
   }
 
