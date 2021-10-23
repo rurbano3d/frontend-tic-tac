@@ -49,3 +49,18 @@ ul {
 .game-info {
   margin-left: 20px;
 }
+
+.play-again{
+  margin-top:10px;
+  padding:10px;
+  background-color: rgb(2,131,202);
+  border:1px solid;
+  border-radius:5px;
+  color:white;
+  cursor:pointer; 
+}
+.play-again-info{
+  display: block;
+  margin-top:5px;
+  color:red;
+}
